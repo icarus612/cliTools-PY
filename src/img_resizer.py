@@ -1,6 +1,7 @@
 from PIL import Image
 import sys
-def resize_image(input_image_path, output_image_path, size):
+
+def resize(input_image_path, output_image_path, size):
 	
 	original_image = Image.open(input_image_path)
 	width, height = original_image.size
@@ -22,4 +23,4 @@ if __name__ == "__main__":
 		size = input("Enter the size of the image: ")
 	
 	size = (int(i) for i in size.split(","))
-	resize_image(name, f"resized_{name}", size)
+	resize(name, f"resized_{name}", size)
